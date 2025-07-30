@@ -66,7 +66,7 @@ export default function Spotlight() {
                   spaceBetween: 20,
                 },
                 1024: {
-                  slidesPerView: 1,
+                  slidesPerView: 2,
                   spaceBetween: 30,
                 },
                 1367: {
@@ -199,12 +199,12 @@ export default function Spotlight() {
             </ul>
             <div className="mt-[20px]">
               <Heading
-                className={`font-libre-baskerville !text-[24px]`}
+                className={`font-libre-baskerville !text-[18px] lg:!text-[24px]`}
                 Heading={
                   " TARC reports highest ever annual sales of Rs 3,722 crore in FY25"
                 }
               />
-              <div className="w-[100%] h-[1px] my-[30px] bg-[var(--secondary-color)]"></div>
+              <div className="w-[100%] h-[1px] my-[20px] lg:my-[30px] bg-[var(--secondary-color)]"></div>
               <Paragraph
                 text={
                   "New Delhi: Realty developer TARC Ltd is expecting Rs 2,000 crore revenue from the next phase of its two projects - Ishva and Kailasa, Amar Sari.."

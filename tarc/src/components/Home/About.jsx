@@ -10,7 +10,7 @@ export default function About() {
             <div className='grid grid-cols-6 lg:grid-cols-12'>
                 <div className='col-span-6 relative lg:mb-0 mb-[20px]'>
                     <div className='relative inline-block'>
-                    <img src='./assets/icons/bg_blob.png' className='w-[250px] right-[-52px] top-[-46px] z-[-1] absolute ' alt=""/>
+                    <img src='./assets/icons/bg_blob.png' className='w-[250px] right-[-52px] top-[-21px] z-[-1] absolute ' alt=""/>
                     <div className='relative overflow-hidden  z-[1]  rounded-[50%] rounded-br-[0]  h-[350px] w-[350px]  inline-block'>
                      <video autoPlay  muted loop  className='object-cover h-[545px] w-[800px] object-[-201px]'>
                         <source src="./assets/video/Insp-India.mp4" type="video/mp4" />
