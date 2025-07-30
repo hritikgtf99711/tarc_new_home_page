@@ -80,17 +80,17 @@ a:hover{text-decoration: underline;}
 }
 
 .slider-card {
-  flex: 0 0 25vw;
+  flex: 0 0 28vw;
 height: 100%;
   position: relative;
   overflow: hidden;
 }
 
 .slider-card img {
-  width:100%;
+  /* width:100%; */
   height: 100%;
-  object-fit: cover;
-  object-position: bottom;
+  object-fit: contain;
+  object-position: top;
   will-change: transform;
 }
 
