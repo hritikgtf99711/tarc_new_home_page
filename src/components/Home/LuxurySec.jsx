@@ -10,7 +10,7 @@ export default function LuxurySec() {
           <div className='col-span-6 m-auto'>
             <Heading Heading={'TARC LUXURY'}/>
             <Heading Heading={'Creating Space for the Mind'}/>
-            <div className='xl:w-[70%] content_cont  ml-[auto]'>
+            <div className='xl:w-[70%]  content_cont  ml-[auto]'>
             <Paragraph className="lg:my-[50px]" text={'Luxury is equated with sheer opulence, magnificence, or aesthetic allure. Yet, TARC transcends this surface definition. Embracing luxury that deeply resonates with the soul, cherishes genuine human connection and fosters inner peace, TARC emerges as a brand profoundly attuned to the intangible facets of luxury.'}/>
             <Commonbtn className="lg:mt-[100px] mt-[30px]"/>
             </div>

@@ -38,7 +38,7 @@ a:hover{text-decoration: underline;}
 
 @media (min-width: 1200px) {
   .container {
-    max-width: 1140px;
+    max-width: 1200px;
   }
 }
 
@@ -115,7 +115,7 @@ height: 100%;
     
 
     @media (max-width: 1368px) {
-.slider-card {flex:0 0 40vw}
+.slider-card {flex:0 0 30vw}
     }
     @media (max-width: 768px) {
 .py_section{padding:80px 0}

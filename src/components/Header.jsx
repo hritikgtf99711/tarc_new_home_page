@@ -14,7 +14,7 @@ export default function Header() {
             </ul>
 
             <div className='ham_menu_container flex place-items-center'>
-                <a href="#" className='flex place-items-center me-[40px]  text-[var(--primary-color)] uppercase font-[500] lg:block hidden'><span className='me-4 text-[14px]'>Get in touch </span><img src='./assets/icons/arrow-right.png'   height={'25'} width={'25'}  alt=''/></a>
+                <a href="#" className='flex place-items-center me-[40px]  text-[var(--primary-color)] uppercase font-[500] lg:flex hidden'><span className='me-4 text-[14px]'>Get in touch </span><img src='./assets/icons/arrow-right.png'   height={'25'} width={'25'}  alt=''/></a>
                     <img src='./assets/icons/ham_menu.png' alt=''  height={'35'} width={'35'} />
             </div>
         </div>
