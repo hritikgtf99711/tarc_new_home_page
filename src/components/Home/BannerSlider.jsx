@@ -112,8 +112,6 @@ export default function Slider() {
       requestAnimationFrame(onRaf);
     };
     requestAnimationFrame(onRaf);
-
-   
   }, []);
 
   return (

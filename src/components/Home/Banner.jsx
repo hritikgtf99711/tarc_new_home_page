@@ -14,7 +14,6 @@ export default function Banner() {
                    <div className='line_container h-[0.8px] w-[70px] bg-[var(--primary-color)]'></div>
                 </div>
             </div>
-            
         </div>
         <div className='mt-[30px] relative relative_div_height '>
                 <img src='./assets/images/image_bg_texture.png' className='w-[70vw]  absolute top-[38px] left-[50%]  translate-x-[-50%]  z-[1] m-[auto]' alt=''/>

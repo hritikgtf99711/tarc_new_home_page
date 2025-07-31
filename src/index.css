@@ -2,8 +2,9 @@
 :root{
     --primary-color:#0B4879;
     --secondary-color:#AA8A80;
+    --opacity-color:#a9887e0f
 }
-body{background: #E5DBD2;font-family: "Work Sans", sans-serif;}
+body{background: #EFE9E4;font-family: "Work Sans", sans-serif;}
 
 /* public/assets/images/index.css */
 

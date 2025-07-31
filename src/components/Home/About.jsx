@@ -6,7 +6,7 @@ export default function About() {
   return (
     <section className='py_section'>
         <div className='container'>
-            <div className='xl:w-[70%] m-[auto] items-center'>
+            <div className='xl:w-[80%] m-[auto] items-center'>
             <div className='grid   justify-center  place-items-center lg:grid-cols-12'>
                 <div className='col-span-6 relative lg:mb-0 mb-[30px]'>
                     <div className='relative inline-block'>

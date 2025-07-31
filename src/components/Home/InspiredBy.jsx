@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function InspiredBy() {
   return (
-    <section className='py-[60px] border-y-[#AA8A80] border-[1px]'>
+    <section className='py-[60px] border-y-[#AA8A80] bg-[var(--opacity-color)] border-[1px]'>
       <div className='container'>
         <div className='lg:flex place-items-center justify-center'>
             <h2 className='font-[Baskervville] text-primary capitalize text-[30px]'>inspired by india</h2>
@@ -13,4 +13,4 @@ export default function InspiredBy() {
       </div>
     </section>
   )
-}
+} 
