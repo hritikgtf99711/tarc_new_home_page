@@ -7,10 +7,10 @@ export default function About() {
     <section className='py_section'>
         <div className='container'>
             <div className='xl:w-[70%] m-[auto] items-center'>
-            <div className='grid grid-cols-6 lg:block flex justify-center  place-items-center lg:grid-cols-12'>
+            <div className='grid   justify-center  place-items-center lg:grid-cols-12'>
                 <div className='col-span-6 relative lg:mb-0 mb-[30px]'>
                     <div className='relative inline-block'>
-                    <img src='./assets/icons/bg_blob.png' className='w-[250px] right-[-52px] top-[-21px] z-[-1] absolute ' alt=""/>
+                    <img src='./assets/icons/bg_blob.png' className='w-[250px] right-[-52px] top-[-21px] z-[-1] absolute' alt=""/>
                     <div className='relative overflow-hidden  z-[1]  rounded-[50%] rounded-br-[0] h-[300px] w-[300px]  lg:h-[350px] lg:w-[350px]  inline-block'>
                      <video autoPlay  muted loop  className='object-cover h-[545px] w-[800px] object-[-201px]'>
                         <source src="./assets/video/Insp-India.mp4" type="video/mp4" />
