@@ -2,37 +2,34 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 const images = [
-  "./assets/images/home/image_banner_1.jpg",
-  "./assets/images/home/image_banner_2.jpg",
-  "./assets/images/home/image_banner_3.jpg",
-  "./assets/images/home/image_banner_4.jpg",
+      "./assets/images/home/image_banner_1.jpg",
+      "./assets/images/home/image_banner_2.jpg",
+      "./assets/images/home/image_banner_3.jpg",
+      "./assets/images/home/image_banner_4.jpg",
       "./assets/images/home/image_banner_5.jpg",
       "./assets/images/home/image_banner6.jpg",
       "./assets/images/home/image_banner_8.jpg",
-
-  "./assets/images/home/image_banner_1.jpg",
-  "./assets/images/home/image_banner_2.jpg",
-  "./assets/images/home/image_banner_3.jpg",
-  "./assets/images/home/image_banner_4.jpg",
+      "./assets/images/home/image_banner_1.jpg",
+      "./assets/images/home/image_banner_2.jpg",
+      "./assets/images/home/image_banner_3.jpg",
+      "./assets/images/home/image_banner_4.jpg",
       "./assets/images/home/image_banner_5.jpg",
       "./assets/images/home/image_banner6.jpg",
       "./assets/images/home/image_banner_8.jpg",
-
-  "./assets/images/home/image_banner_1.jpg",
-  "./assets/images/home/image_banner_2.jpg",
-  "./assets/images/home/image_banner_3.jpg",
-  "./assets/images/home/image_banner_4.jpg",
+      "./assets/images/home/image_banner_1.jpg",
+      "./assets/images/home/image_banner_2.jpg",
+      "./assets/images/home/image_banner_3.jpg",
+      "./assets/images/home/image_banner_4.jpg",
       "./assets/images/home/image_banner_5.jpg",
       "./assets/images/home/image_banner6.jpg",
       "./assets/images/home/image_banner_8.jpg",
-
-  "./assets/images/home/image_banner_1.jpg",
-  "./assets/images/home/image_banner_2.jpg",
-  "./assets/images/home/image_banner_3.jpg",
-  "./assets/images/home/image_banner_4.jpg",
-    "./assets/images/home/image_banner_5.jpg",
-    "./assets/images/home/image_banner6.jpg",
-    "./assets/images/home/image_banner_8.jpg",
+      "./assets/images/home/image_banner_1.jpg",
+      "./assets/images/home/image_banner_2.jpg",
+      "./assets/images/home/image_banner_3.jpg",
+      "./assets/images/home/image_banner_4.jpg",
+      "./assets/images/home/image_banner_5.jpg",
+      "./assets/images/home/image_banner6.jpg",
+      "./assets/images/home/image_banner_8.jpg",
 ];
 
 // const images = [
@@ -107,7 +104,7 @@ export default function Slider() {
         const offset = (cardX - winW / 2) / winW;
         gsap.to(img, {
           x: -offset * 300,
-          scale: 1.6,
+          scale: 1.8,
           duration: 0.1,
           ease: "ease.in",
         });
