@@ -175,7 +175,7 @@ export default function Testimonial() {
   return (
     <section
       ref={sectionRef}
-      className='py_section relative z-[999] overflow-hidden border-t-[var(--secondary-color)] border-t-[1px] testimonial-sec'
+      className='py_section relative z-[999] overflow-hidden border-t-[#aa8a8057] border-t-[1px] testimonial-sec'
     >
       <div className='container'>
         <div ref={headingRef} className='text-center'>

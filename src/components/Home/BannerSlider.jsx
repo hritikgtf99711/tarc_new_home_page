@@ -91,7 +91,7 @@ export default function Slider() {
   }, []);
 
   return (
-    <div className=" slider-wrapper relative z-[2] ">
+    <div className=" slider-wrapper relative z-[555p] ">
       <div className="slider-track" ref={trackRef}>
         {images.concat(images, images).map((src, i) => (
           <div

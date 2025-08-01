@@ -120,7 +120,7 @@ export default function Spotlight() {
   return (
     <section
       ref={sectionRef}
-      className="border-[1px] lg:py-0 py-[80px] relative border-t-[1px]  border-y-0 border-[var(--secondary-color)]"
+      className="border-[1px] lg:py-0 py-[80px] relative border-t-[1px]  border-y-0 border-[#aa8a8057]"
     >
       <img
         src="./assets/images/home/newsletter/newsletter_bg.png"
@@ -128,7 +128,7 @@ export default function Spotlight() {
         className="absolute top-0 left-0 h-[100%] w-[100%]"
       />
       <div className="grid grid-cols-1 lg:grid-cols-12 lg:h-[100vh] relative">
-        <div ref={leftColRef} className="col-span-6 border-r-[1px] border-r-[var(--secondary-color)]">
+        <div ref={leftColRef} className="col-span-6 border-r-[1px] border-r-[#aa8a8057]">
           <div className="lg:py-[60px] lg:!px-[90px] px-[20px]">
             <Heading className="heading" Heading={"TARC in the Spotlight"} />
             <div className="lg:py-[38px] lg:pt-[30px] pt-[30px] relative overflow-hidden lg:pl-[15px]">
@@ -250,7 +250,7 @@ export default function Spotlight() {
                 className="font-libre-baskerville !text-[18px] lg:!text-[22px]"
                 Heading={"TARC reports highest ever annual sales of Rs 3,722 crore in FY25"}
               />
-              <div className="w-[100%] h-[1px] my-[20px] lg:my-[30px] bg-[var(--secondary-color)]"></div>
+              <div className="w-[100%] h-[1px] my-[20px] lg:my-[30px] bg-[#aa8a8057]"></div>
               <Paragraph
                 className="paragraph"
                 text={

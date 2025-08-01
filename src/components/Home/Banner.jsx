@@ -65,8 +65,13 @@ export default function Banner() {
           </div>
         </div>
       </div>
-      <div className='pt-[50px] relative relative_div_height'>
-        <img src='./assets/images/pattern.svg' className='w-[70vw] absolute top-[48px] left-[50%] translate-y-[-50%] translate-x-[-50%] z-[1] m-[auto]' alt='' />
+      <div className='pt-[27.8px] relative relative_div_height'>
+      <div
+  className="absolute inset-0 top-[12px] z-0 bg-repeat w-[80%] m-[auto]  mt-2 "
+  style={{
+   backgroundImage: `url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 10 10' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='0' y='10' font-size='10' fill='%23AA8A80'%3E+%3C/text%3E%3C/svg%3E")`,
+  }}
+></div>
         <BannerSlider className='banner-slider' />
       </div>
     </section>

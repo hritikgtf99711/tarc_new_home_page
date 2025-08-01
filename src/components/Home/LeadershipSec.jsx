@@ -147,7 +147,6 @@ export default function LeadershipSec() {
         <div className='grid grid-cols-6 lg:grid-cols-12 lg:pt-[60px]'>
           <div className='lg:col-span-3 col-span-6'>
             <div className='main-heading'>
-               <div className='lg:w-[calc(65%-12px)]'>
               <Heading
                 className={'!leading-[36px] mb-[30px]'}
                 Heading={
@@ -156,7 +155,6 @@ export default function LeadershipSec() {
                   </span>
                 }
               />
-              </div>
             </div>
             <div className='lg:w-[65%] ml-[auto] content-container'>
               <Paragraph
@@ -173,7 +171,7 @@ export default function LeadershipSec() {
             </div>
           </div>
           <div className='col-span-1'></div>
-          <div className='col-span-7 lg:mt-[0] mt-[30px]' ref={leadersContainerRef}>
+          <div className='col-span-8 lg:mt-[0] mt-[30px]' ref={leadersContainerRef}>
             <div className='leaders-container'>
               <div className='grid-cols-1 lg:grid-cols-12 grid gap-[35px]'>
                 <div className='col-span-4'>
