@@ -127,16 +127,17 @@ export default function Spotlight() {
         alt="bg"
         className="absolute top-0 left-0 h-[100%] w-[100%]"
       />
-      <div className="grid grid-cols-1 lg:grid-cols-12 lg:h-[100vh] relative">
+      <div className="grid grid-cols-1 lg:grid-cols-12 lg:h-[90vh] relative">
         <div ref={leftColRef} className="col-span-6 border-r-[1px] border-r-[#aa8a8057]">
           <div className="lg:py-[60px] lg:!px-[90px] px-[20px]">
             <Heading className="heading" Heading={"TARC in the Spotlight"} />
             <div className="lg:py-[38px] lg:pt-[30px] pt-[30px] relative overflow-hidden lg:pl-[15px]">
-              <img
-                src="./assets/images/xsmall_bg_texture.png"
-                className="absolute top-[47%] translate-y-[-50%] w-[210px] left-[0]"
-                alt="testimonial"
-              />
+              <div
+  className="absolute inset-0 top-[calc(0)] z-0 top-[58px] left-[-370px] h-[200px] bg-repeat w-[200px] m-[auto]  mt-2 "
+  style={{
+   backgroundImage: `url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 10 10' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='0' y='10' font-size='10' fill='%23AA8A80'%3E+%3C/text%3E%3C/svg%3E")`,
+  }}
+></div>
               <Swiper
                 modules={[Pagination, Navigation]}
                 pagination={{
@@ -189,7 +190,7 @@ export default function Spotlight() {
                 ].map((slide, index) => (
                   <SwiperSlide key={slide.id}>
                     <div className="slider_item">
-                      <span className="text-[#8B5949] block mb-[50px] text-[18px]">
+                      <span className="text-[#8B5949] block mb-[50px] text-[15px]">
                         ({(index + 1).toString().padStart(2, "0")})
                       </span>
                       <img
@@ -205,7 +206,7 @@ export default function Spotlight() {
                 <div className="prev-arrow bg-[var(--primary-color)] h-[35px] w-[35px] rounded-[50%] cursor-pointer">
                   <img
                     src="./assets/icons/right_arrow.svg"
-                    className="h-[100%] w-[100%]"
+                    className="h-[100%] p-[4px] w-[100%]"
                     alt="Previous"
                   />
                 </div>
@@ -217,7 +218,7 @@ export default function Spotlight() {
                 <div className="next-arrow bg-[var(--primary-color)] rotate-[180deg] h-[35px] w-[35px] rounded-[50%] cursor-pointer">
                   <img
                     src="./assets/icons/right_arrow.svg"
-                    className="h-[100%] w-[100%]"
+                    className="h-[100%] p-[4px] w-[100%]"
                     alt="Next"
                   />
                 </div>
@@ -229,26 +230,26 @@ export default function Spotlight() {
           </div>
         </div>
         <div ref={rightColRef} className="col-span-6 lg:mt-[auto] mt-[40px]">
-          <div className="lg:py-[60px] relative lg:!mx-[30px] px-[20px]">
+          <div className="lg:py-[60px] lg:pb-[80px] relative lg:!mx-[30px] px-[60px]">
             <img
               src="./assets/icons/quote.svg"
               alt="quote"
-              className="absolute top-[-50px] left-[18px]"
+              className="absolute top-[-40px] left-[60px] w-[70px]"
             />
             <ul className="lg:mb-[40px] mb-[20px]">
               <li className="mb-[8px]">
-                <span className="text-primary font-[500] me-4">Publication:</span>
-                <span>The Economic Times</span>
+                <span className="text-primary font-[300] me-4">Publication:</span>
+                <span className="font-[300]" >The Economic Times</span>
               </li>
               <li className="">
-                <span className="text-primary font-[500] me-4">Date:</span>
-                <span>25 Feb 2025</span>
+                <span  className="text-primary font-[300] me-4">Date:</span>
+                <span className="font-[300]">25 Feb 2025</span>
               </li>
             </ul>
             <div className="mt-[20px]">
               <Heading
-                className="font-libre-baskerville !text-[18px] lg:!text-[22px]"
-                Heading={"TARC reports highest ever annual sales of Rs 3,722 crore in FY25"}
+                className="!text-[18px] lg:!text-[22px]"
+                Heading={<span>TARC respanorts highest ever annual sales of Rs  <span className="text-[32px]">3,722 </span>crore in <span className="text-[24px]">FY25</span></span>}
               />
               <div className="w-[100%] h-[1px] my-[20px] lg:my-[30px] bg-[#aa8a8057]"></div>
               <Paragraph

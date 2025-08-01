@@ -60,6 +60,7 @@ export default function LuxurySec() {
       delay: 0.2,
     });
 
+    // Cleanup animations on component unmount
     return () => {
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
       gsap.killTweensOf('.luxury-sec h2, .luxury-sec .content_cont p, .luxury-sec .content_cont button, .luxury-sec .img_container img');
@@ -81,7 +82,7 @@ export default function LuxurySec() {
           </div>
           <div className='lg:block hidden col-span-1'>
           </div>
-          <div className='lg:col-span-5 col-span-12 lg:mt-0 mt-[30px]'>
+          <div className='lg:col-span-5 col-span-12 lg:mt-0 mt-[30px] lg:pr-[5%] py-[30px]'>
             <figure className='img_container'>
               <img src='./assets/images/home/image_banner_4.jpg' className='w-[100%]' alt='' />
             </figure>

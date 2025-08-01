@@ -59,7 +59,7 @@ export default function InspiredBy() {
       <div className='container py-[30px]'>
         <div className='lg:flex place-items-center justify-center'>
           <h2 className='font-[Baskervville] text-primary !font-[300]  text-[30px]'>Inspired By India</h2>
-          <div className='line lg:w-[0.1px] w-[100px] h-[0.2px] lg:py-0 my-[20px] mx-[30px] lg:h-[50px] bg-[var(--primary-color)]'></div>
+          <div className='line lg:w-[0.1px] w-[100px] h-[0.2px] lg:py-0 my-[20px] mx-[30px] lg:h-[50px] bg-[#0b48794a]'></div>
           <img src='./assets/icons/indian_image.png' alt='indian image' width='160' />
         </div>
       </div>

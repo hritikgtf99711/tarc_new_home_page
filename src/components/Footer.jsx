@@ -74,7 +74,7 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="relative z-[2]" ref={footerRef}>
+    <footer className="relative py_section !pb-0 z-[2]" ref={footerRef}>
       <div className="">
         <img
           src="./assets/images/footer_bg.jpg"
@@ -83,7 +83,7 @@ export default function Footer() {
         />
         <div className="relative">
           <div
-            className="lg:py-[90px] py-[50px] border-t-[0.7px] border-b-[0.7px] border-[#A78A80]"
+            className="lg:py-[90px] py-[50px] border-t-[0.7px] border-b-[0.7px] border-[#a78a8061]"
             ref={topSectionRef}
           >
             <div className="container">
@@ -104,9 +104,10 @@ export default function Footer() {
                         className="text-[16px] flex place-items-start leading-[30px] gap-[20px]"
                       >
                         <img
-                          width={"20"}
+                          width={"17"}
                           src="./assets/icons/icon_location.svg"
                           alt=""
+                          className="mt-[6px]"
                         />
                         <span>
                           2nd Floor, C-3, Qutab{" "}
@@ -124,10 +125,10 @@ export default function Footer() {
                     <li className="text-[16px] lg:mb-[18px] mb-[35px]">
                       <a
                         href=""
-                        className="flex font-[300] place-items-start leading-[30px] gap-[20px]"
+                        className="flex font-[300] place-items-center leading-[30px] gap-[20px]"
                       >
                         <img
-                          width={"20"}
+                          width={"17"}
                           src="./assets/icons/icon_phone.svg"
                           alt=""
                         />
@@ -137,10 +138,10 @@ export default function Footer() {
                     <li className="mb-[16px] text-[16px] lg:mb-[20px]">
                       <a
                         href=""
-                        className="flex font-[300] place-items-start leading-[30px] gap-[20px]"
+                        className="flex font-[300] place-items-center leading-[30px] gap-[20px]"
                       >
                         <img
-                          width={"20"}
+                          width={"17"}
                           src="./assets/icons/icon_email.svg"
                           alt=""
                         />
@@ -154,7 +155,7 @@ export default function Footer() {
                     <li>
                       <a href="">
                         <img
-                          width={"20"}
+                          width={"17"}
                           src="./assets/icons/icon_facebook.svg"
                           alt=""
                         />
@@ -163,7 +164,7 @@ export default function Footer() {
                     <li>
                       <a href="">
                         <img
-                          width={"20"}
+                          width={"17"}
                           src="./assets/icons/icon_linkedin.svg"
                           alt=""
                         />
@@ -172,7 +173,7 @@ export default function Footer() {
                     <li>
                       <a href="">
                         <img
-                          width={"20"}
+                          width={"17"}
                           src="./assets/icons/icon_twitter.svg"
                           alt=""
                         />
@@ -181,7 +182,7 @@ export default function Footer() {
                     <li>
                       <a href="">
                         <img
-                          width={"20"}
+                          width={"17"}
                           src="./assets/icons/icon_youtube.svg"
                           alt=""
                         />
@@ -190,7 +191,7 @@ export default function Footer() {
                     <li>
                       <a href="">
                         <img
-                          width={"20"}
+                          width={"17"}
                           src="./assets/icons/icon_insta.svg"
                           alt=""
                         />
@@ -311,11 +312,11 @@ export default function Footer() {
         className="bg-[#9f7f75cf] abolute bottom-0 left-0 w-[100%] lg:py-[10px] py-[20px] relative"
       >
         <div className="container">
-          <ul className="lg:flex text-[14px] text-white justify-between">
-            <li className="lg:mb-0 font-[600] mb-[10px]">
+          <ul className="lg:flex text-[13px] text-white justify-between">
+            <li className="lg:mb-0 font-[300] mb-[10px]">
               <a href="">Privacy Policy | Disclaimer</a>
             </li>
-            <li className="font-[600] ">
+            <li className="font-[300] ">
               Copyright <a href="">@ TARC</a> Limited | 2025 | Curated by:
                <a href="https://www.gtftechnologies.com/" target="_blank">
                 GTF Technologies

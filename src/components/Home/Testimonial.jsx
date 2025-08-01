@@ -186,7 +186,7 @@ export default function Testimonial() {
           <img
             src='./assets/icons/design_icon.png'
             alt='Design icon'
-            width='80'
+            width='50'
             className='m-[auto] design-icon'
           />
           <div className='m-[auto] pt-[30px] lg:pt-[80px]'>
@@ -226,11 +226,12 @@ export default function Testimonial() {
                     </div>
                     <div className='col-span-6 lg:col-span-4'>
                       <div className='relative'>
-                        <img
-                          src='./assets/images/small_bg_texture.png'
-                          className='absolute top-[-58px] left-[-30px] bg-texture'
-                          alt='Background texture'
-                        />
+                       <div
+  className="absolute inset-0 top-[calc(0)] z-0 top-[-58px] left-[-130px] h-[323px] bg-repeat w-[90%] m-[auto]  mt-2 "
+  style={{
+   backgroundImage: `url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 10 10' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='0' y='10' font-size='10' fill='%23AA8A80'%3E+%3C/text%3E%3C/svg%3E")`,
+  }}
+></div>
                         <img
                           src={testimonial.image}
                           className='w-[100%] z-[1] relative testimonial-image'

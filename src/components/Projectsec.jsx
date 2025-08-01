@@ -89,7 +89,7 @@ export default function Projectsec() {
           opacity: 0,
           scale: 0.6,
           rotation: 20,
-          duration: 1.2,
+          duration: 0.3,
           ease: 'back.out(1.7)',
           scrollTrigger: {
             trigger: item,
@@ -97,7 +97,7 @@ export default function Projectsec() {
             toggleActions: 'play none none reverse',
             scroller: overflowSecRef.current, // Use scrollable container as scroller
           },
-          delay: index * 0.6,
+          delay: index * 0.2,
         });
 
         // Banner animation
@@ -105,7 +105,7 @@ export default function Projectsec() {
           opacity: 0,
           y: 80,
           scale: 0.9,
-          duration: 1.5,
+          duration: 0.3,
           ease: 'power4.out',
           scrollTrigger: {
             trigger: item,
@@ -113,7 +113,7 @@ export default function Projectsec() {
             toggleActions: 'play none none reverse',
             scroller: overflowSecRef.current,
           },
-          delay: index * 0.6 + 0.4,
+          delay: index * 0.2,
         });
 
         // Caption animation (including line)
@@ -128,7 +128,7 @@ export default function Projectsec() {
             toggleActions: 'play none none reverse',
             scroller: overflowSecRef.current,
           },
-          delay: index * 0.6 + 0.8,
+          delay: index * 0.2,
         });
 
         // Hover effect for banner
@@ -157,9 +157,9 @@ export default function Projectsec() {
   }, []);
 
   return (
-    <section className='relative pt-[30px] overflow-hidden project-sec' ref={sectionRef}>
+    <section className='relative pt-[80px] overflow-hidden project-sec' ref={sectionRef}>
        <div
-  className="absolute inset-0 top-[-6px] z-0 bg-repeat w-[80%] m-[auto]  mt-2 "
+  className="absolute inset-0 top-[-10px] z-0 bg-repeat w-[90%] m-[auto]  mt-2 "
   style={{
    backgroundImage: `url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 10 10' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='0' y='10' font-size='10' fill='%23AA8A80'%3E+%3C/text%3E%3C/svg%3E")`,
   }}
@@ -199,7 +199,7 @@ export default function Projectsec() {
                 alt='TARC Kailasa banner'
               />
               <figcaption className='mt-4 flex place-items-center'>
-                <span className='uppercase text-white text-[18px] text-left'>TARC Kailasa, Patel Road</span>
+                <span className='uppercase text-white text-[16px] text-left'>TARC Kailasa, Patel Road</span>
                 <span className='w-[100px] h-[1px] bg-[#fff] block ms-[15px]'></span>
               </figcaption>
             </figure>
@@ -216,7 +216,7 @@ export default function Projectsec() {
                 alt='TARC Kailasa banner'
               />
               <figcaption className='mt-4 flex place-items-center'>
-                <span className='uppercase text-white text-[18px] text-left'>TARC Kailasa, Patel Road</span>
+                <span className='uppercase text-white text-[16px] text-left'>TARC Kailasa, Patel Road</span>
                 <span className='w-[100px] h-[1px] bg-[#fff] block ms-[15px]'></span>
               </figcaption>
             </figure>
@@ -233,7 +233,7 @@ export default function Projectsec() {
                 alt='TARC Kailasa banner'
               />
               <figcaption className='mt-4 flex place-items-center'>
-                <span className='uppercase text-white text-[18px] text-left'>TARC Kailasa, Patel Road</span>
+                <span className='uppercase text-white text-[16px] text-left'>TARC Kailasa, Patel Road</span>
                 <span className='w-[100px] h-[1px] bg-[#fff] block ms-[15px]'></span>
               </figcaption>
             </figure>
@@ -250,7 +250,7 @@ export default function Projectsec() {
                 alt='TARC Kailasa banner'
               />
               <figcaption className='mt-4 flex place-items-center'>
-                <span className='uppercase text-white text-[18px] text-left'>TARC Kailasa, Patel Road</span>
+                <span className='uppercase text-white text-[16px] text-left'>TARC Kailasa, Patel Road</span>
                 <span className='w-[100px] h-[1px] bg-[#fff] block ms-[15px]'></span>
               </figcaption>
             </figure>
@@ -267,7 +267,7 @@ export default function Projectsec() {
                 alt='TARC Kailasa banner'
               />
               <figcaption className='mt-4 flex place-items-center'>
-                <span className='uppercase text-white text-[18px] text-left'>TARC Kailasa, Patel Road</span>
+                <span className='uppercase text-white text-[16px] text-left'>TARC Kailasa, Patel Road</span>
                 <span className='w-[100px] h-[1px] bg-[#fff] block ms-[15px]'></span>
               </figcaption>
             </figure>

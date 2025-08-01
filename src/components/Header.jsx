@@ -6,11 +6,11 @@ export default function Header() {
         <div className='container'>
         <div className='social_container flex justify-between'>
             <ul className='flex place-items-center'>
-                <li><img  className="me-3" src='./assets/icons/facebook.svg' height={'20'} width={'20'} alt=''/></li>
-                <li><img  className="me-3" src='./assets/icons/insta.png' height={'20'} width={'20'} alt=''/></li>
-                <li><img  className="me-3" src='./assets/icons/linkedin.png' height={'20'} width={'20'} alt=''/></li>
-                <li><img  className="me-3" src='./assets/icons/youtube.svg' height={'20'} width={'20'} alt=''/></li>
-                <li><img  src='./assets/icons/twitter.png' height={'20'} width={'20'} alt=''/></li>
+                <li><img  className="me-3" src='./assets/icons/facebook.svg' height={'14'} width={'14'} alt=''/></li>
+                <li><img  className="me-3" src='./assets/icons/insta.png' height={'14'} width={'14'} alt=''/></li>
+                <li><img  className="me-3" src='./assets/icons/linkedin.png' height={'14'} width={'14'} alt=''/></li>
+                <li><img  className="me-3" src='./assets/icons/youtube.svg' height={'14'} width={'14'} alt=''/></li>
+                <li><img  src='./assets/icons/twitter.png' height={'14'} width={'14'} alt=''/></li>
             </ul>
 
             <div className='ham_menu_container flex place-items-center'>

@@ -67,7 +67,7 @@ export default function Banner() {
       </div>
       <div className='pt-[27.8px] relative relative_div_height'>
       <div
-  className="absolute inset-0 top-[12px] z-0 bg-repeat w-[80%] m-[auto]  mt-2 "
+  className="absolute inset-0 top-[calc(1%-4px)] z-0 bg-repeat w-[90%] m-[auto]  mt-2 "
   style={{
    backgroundImage: `url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 10 10' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='0' y='10' font-size='10' fill='%23AA8A80'%3E+%3C/text%3E%3C/svg%3E")`,
   }}

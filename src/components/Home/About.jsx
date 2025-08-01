@@ -89,7 +89,7 @@ export default function About() {
             <div className='col-span-1'></div>
             <div className='col-span-5'>
               <div className='content'>
-                <div className='lg:w-[60%]'>
+                <div className='about_content lg:w-[60%]'>
                 <Heading Heading={<span>Where legacy finds <span className='lg:block'></span> a new home</span>} />
                 </div>
                 <div className='mt-[30px] mb-[45px]'>

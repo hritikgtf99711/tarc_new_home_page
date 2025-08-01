@@ -113,7 +113,7 @@ export default function LeadershipSec() {
         scrollTrigger: {
           trigger: leadersContainerRef.current,
           start: 'bottom 80%',
-          toggleActions: 'play none none reverse',
+          // toggleActions: 'play none none reverse',
         },
       });
     }, sectionRef);
@@ -137,8 +137,8 @@ export default function LeadershipSec() {
         <div className='grid grid-cols-6 lg:grid-cols-12'>
           <div className='col-span-3'></div>
           <div className='col-span-1'></div>
-          <div className='col-span-7'>
-            <div className='line_heading lg:flex hidden place-items-center'>
+          <div className='col-span-8'>
+            <div className='line_heading lg:flex hidden place-items-center w-[100%]'>
               <Heading Heading={'our leadership'} />
               <span className='w-[100%] h-[0.8px] ml-[30px] block bg-[var(--primary-color)] flex-1'></span>
             </div>
@@ -163,7 +163,7 @@ export default function LeadershipSec() {
               />
               <a
                 href=''
-                className='text-primary capitalize flex place-items-center font-[Baskervville]'
+                className='text-primary relative z-[99] capitalize flex place-items-center font-[Baskervville]'
               >
                 <span className='me-[8px]'>know more</span>
                 <img src='./assets/icons/arrow-right.png' width='20' alt='Arrow right' />

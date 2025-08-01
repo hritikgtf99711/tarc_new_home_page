@@ -11,6 +11,7 @@ export default function Home() {
   return (
     <>
     <div className='bg-[url("./assets/images/bg_texture.png")] z-[2] absolute top-0 left-0 h-[100%] w-[100%]'></div>
+     <div className='bg-[url("./assets/images/bg_texture.png")] z-[2] absolute top-0 left-0 h-[100%] w-[100%] opacity-[0.5]'></div>
       <Banner/>
       <About/>
       <InspiredBy/>
