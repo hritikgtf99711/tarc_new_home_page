@@ -211,7 +211,7 @@ export default function Footer() {
                       Heading={"INVERTER"}
                     />
                     <ul className="lg:mb-0 mb-[25px]">
-                      <li className="font-[300] lg:mb-[18px]">
+                      <li className="font-[300] lg:mb-[12px]">
                         <a
                           href=""
                           className="text-[16px] leading-[30px] gap-[20px]"
@@ -235,7 +235,7 @@ export default function Footer() {
                       Heading={"MEDIA"}
                     />
                     <ul className="lg:mb-0 mb-[25px]">
-                      <li className="font-[300] lg:mb-[18px]">
+                      <li className="font-[300] lg:mb-[12px]">
                         <a
                           href=""
                           className="text-[16px] leading-[30px] gap-[20px]"
@@ -259,7 +259,7 @@ export default function Footer() {
                       Heading={"CAREER"}
                     />
                     <ul className="lg:mb-0 mb-[25px]">
-                      <li className="font-[300] lg:mb-[18px]">
+                      <li className="font-[300] lg:mb-[12px]">
                         <a
                           href=""
                           className="text-[16px] leading-[30px] gap-[20px]"
@@ -275,7 +275,7 @@ export default function Footer() {
                       Heading={"OTHER LINKS"}
                     />
                     <ul className="">
-                      <li className="font-[300] lg:mb-[18px]">
+                      <li className="font-[300] lg:mb-[12px]">
                         <a
                           href="https://tarc.in/tarc_nri.php"
                           className="text-[16px] leading-[30px] gap-[20px]"
@@ -283,7 +283,7 @@ export default function Footer() {
                           NRI Support
                         </a>
                       </li>
-                      <li className="font-[300] lg:mb-[18px]">
+                      <li className="font-[300] lg:mb-[12px]">
                         <a
                           href="https://tarc.in/tarc_nri.php"
                           className="text-[16px] leading-[30px] gap-[20px]"
@@ -308,16 +308,16 @@ export default function Footer() {
         </div>
       </div>
       <div
-        className="bg-[#9F7F75] lg:py-[10px] py-[20px] relative"
+        className="bg-[#9f7f75cf] abolute bottom-0 left-0 w-[100%] lg:py-[10px] py-[20px] relative"
       >
         <div className="container">
           <ul className="lg:flex text-[14px] text-white justify-between">
-            <li className="lg:mb-0 mb-[10px]">
+            <li className="lg:mb-0 font-[600] mb-[10px]">
               <a href="">Privacy Policy | Disclaimer</a>
             </li>
-            <li>
+            <li className="font-[600] ">
               Copyright <a href="">@ TARC</a> Limited | 2025 | Curated by:
-              <a href="https://www.gtftechnologies.com/" target="_blank">
+               <a href="https://www.gtftechnologies.com/" target="_blank">
                 GTF Technologies
               </a>
             </li>

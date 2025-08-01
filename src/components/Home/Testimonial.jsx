@@ -8,7 +8,6 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-// Register ScrollTrigger with GSAP
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Testimonial() {
@@ -39,7 +38,6 @@ export default function Testimonial() {
     },
   ];
 
-  // Refs for GSAP animations
   const sectionRef = useRef(null);
   const headingRef = useRef(null);
   const swiperRef = useRef(null);
@@ -47,7 +45,6 @@ export default function Testimonial() {
   useEffect(() => {
     const section = sectionRef.current;
 
-    // Animate headings with letter-by-letter effect
     const headings = headingRef.current.querySelectorAll('h2');
     headings.forEach((heading, index) => {
       const letters = heading.textContent.split('');
@@ -67,7 +64,6 @@ export default function Testimonial() {
       });
     });
 
-    // Animate design icon
     gsap.from('.design-icon', {
       opacity: 0,
       scale: 0.8,
@@ -80,7 +76,6 @@ export default function Testimonial() {
       },
     });
 
-    // Animate Swiper slides
     const slides = swiperRef.current.querySelectorAll('.swiper-slide');
     slides.forEach((slide, index) => {
       const image = slide.querySelector('.testimonial-image');
@@ -88,7 +83,6 @@ export default function Testimonial() {
       const name = slide.querySelector('.name');
       const project = slide.querySelector('.project');
 
-      // Image animation with subtle zoom
       gsap.from(image, {
         opacity: 0,
         scale: 1.1,
@@ -102,7 +96,6 @@ export default function Testimonial() {
         delay: index * 0.2,
       });
 
-      // Add hover effect for image
       image.addEventListener('mouseenter', () =>
         gsap.to(image, { scale: 1.05, duration: 0.3, ease: 'power2.out' })
       );
@@ -110,7 +103,6 @@ export default function Testimonial() {
         gsap.to(image, { scale: 1, duration: 0.3, ease: 'power2.out' })
       );
 
-      // Text and name animation
       gsap.from([name, project, text], {
         opacity: 0,
         x: -50,
@@ -125,7 +117,6 @@ export default function Testimonial() {
         delay: index * 0.2 + 0.3,
       });
 
-      // Parallax effect for background texture
       const bgTexture = slide.querySelector('.bg-texture');
       gsap.to(bgTexture, {
         y: '15%',
@@ -139,7 +130,6 @@ export default function Testimonial() {
       });
     });
 
-    // Animate navigation arrows
     const arrows = swiperRef.current.querySelectorAll('.arrow_container .prev_arrow, .arrow_container .next_arrow');
     arrows.forEach((arrow, index) => {
       gsap.from(arrow, {
@@ -155,7 +145,6 @@ export default function Testimonial() {
         delay: 0.5 + index * 0.2,
       });
 
-      // Add hover effect for arrows
       arrow.addEventListener('mouseenter', () =>
         gsap.to(arrow, { scale: 1.2, duration: 0.3, ease: 'power2.out' })
       );
@@ -164,7 +153,6 @@ export default function Testimonial() {
       );
     });
 
-    // Cleanup
     return () => {
       slides.forEach(slide => {
         const image = slide.querySelector('.testimonial-image');
@@ -240,7 +228,7 @@ export default function Testimonial() {
                       <div className='relative'>
                         <img
                           src='./assets/images/small_bg_texture.png'
-                          className='absolute top-[-30px] left-[-30px] bg-texture'
+                          className='absolute top-[-58px] left-[-30px] bg-texture'
                           alt='Background texture'
                         />
                         <img
@@ -248,7 +236,7 @@ export default function Testimonial() {
                           className='w-[100%] z-[1] relative testimonial-image'
                           alt={`${testimonial.name} testimonial`}
                         />
-                        <div className='border-[1px] border-[var(--secondary-color)] absolute h-[100%] top-[62%] right-[-30px] translate-y-[-50%] w-[100%]'></div>
+                        <div className='border-[1px] border-[var(--secondary-color)] absolute h-[100%] top-[60%] right-[-30px] translate-y-[-50%] w-[100%]'></div>
                       </div>
                     </div>
                     <div className='col-span-6 lg:col-span-4 mt-[50px] lg:m-[auto] lg:w-[70%]'>

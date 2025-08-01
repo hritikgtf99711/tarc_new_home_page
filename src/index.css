@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
 :root{--primary-color:#0B4879;--secondary-color:#AA8A80;--opacity-color:#a9887e0f}
 body{background: #EFE9E4;font-family: "Work Sans", sans-serif;}
 a:hover{text-decoration: underline;}

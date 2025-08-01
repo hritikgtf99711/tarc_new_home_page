@@ -5,7 +5,6 @@ export default function InspiredBy() {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    // Animate the heading with staggered letter animation
     const heading = document.querySelector('.inspired-sec h2');
     if (heading) {
       const letters = heading.textContent.split('');
@@ -24,7 +23,6 @@ export default function InspiredBy() {
       });
     }
 
-    // Animate the line
     gsap.from('.inspired-sec .line', {
       scaleX: 0,
       duration: 1,
@@ -37,7 +35,6 @@ export default function InspiredBy() {
       delay: 0.5,
     });
 
-    // Animate the image
     gsap.from('.inspired-sec img', {
       opacity: 0,
       rotation: 15,
@@ -51,7 +48,6 @@ export default function InspiredBy() {
       delay: 0.8,
     });
 
-    // Cleanup animations on component unmount
     return () => {
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
       gsap.killTweensOf('.inspired-sec .letter, .inspired-sec .line, .inspired-sec img');
@@ -59,11 +55,11 @@ export default function InspiredBy() {
   }, []);
 
   return (
-    <section className='py-[60px] border-y-[#AA8A80] bg-[var(--opacity-color)] border-t-[1px] border-b-[1px] inspired-sec'>
-      <div className='container'>
+    <section className='py-[60px] border-y-[#AA8A80] bg-[var(--opacity-color)] border-t-[0.4px] border-b-[0.4px] inspired-sec'>
+      <div className='container py-[30px]'>
         <div className='lg:flex place-items-center justify-center'>
-          <h2 className='font-[Baskervville] text-primary capitalize text-[30px]'>inspired by india</h2>
-          <div className='line lg:w-[0.2px] w-[100px] h-[0.2px] lg:py-0 my-[20px] mx-[30px] lg:h-[50px] bg-[var(--primary-color)]'></div>
+          <h2 className='font-[Baskervville] text-primary !font-[300]  text-[30px]'>Inspired By India</h2>
+          <div className='line lg:w-[0.1px] w-[100px] h-[0.2px] lg:py-0 my-[20px] mx-[30px] lg:h-[50px] bg-[var(--primary-color)]'></div>
           <img src='./assets/icons/indian_image.png' alt='indian image' width='160' />
         </div>
       </div>

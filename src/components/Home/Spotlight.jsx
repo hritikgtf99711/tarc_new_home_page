@@ -35,7 +35,6 @@ export default function Spotlight() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Left column: Heading animation
       gsap.from(leftColRef.current.querySelector(".heading"), {
         opacity: 0,
         y: 60,
@@ -48,7 +47,6 @@ export default function Spotlight() {
         },
       });
 
-      // Left column: Swiper slides animation (staggered)
       gsap.from(".slider_item", {
         opacity: 0,
         y: 40,
@@ -63,7 +61,6 @@ export default function Spotlight() {
         },
       });
 
-      // Left column: Navigation arrows and progress bar
       gsap.from(".arrow_container .prev-arrow, .arrow_container .next-arrow", {
         opacity: 0,
         scale: 0.7,
@@ -90,7 +87,6 @@ export default function Spotlight() {
         },
       });
 
-      // Right column: Quote icon
       gsap.from(rightColRef.current.querySelector("img"), {
         opacity: 0,
         scale: 0.3,
@@ -104,7 +100,6 @@ export default function Spotlight() {
         },
       });
 
-      // Right column: Content (publication, date, heading, paragraph, link)
       gsap.from(rightColRef.current.querySelectorAll("ul, .heading, .paragraph, a"), {
         opacity: 0,
         x: 60,
@@ -125,10 +120,10 @@ export default function Spotlight() {
   return (
     <section
       ref={sectionRef}
-      className="border-[1px] lg:py-0 py-[80px] relative border-y-0 border-[var(--secondary-color)]"
+      className="border-[1px] lg:py-0 py-[80px] relative border-t-[1px]  border-y-0 border-[var(--secondary-color)]"
     >
       <img
-        src="./assets/images/home/newsletter/newsletter_bg.jpg"
+        src="./assets/images/home/newsletter/newsletter_bg.png"
         alt="bg"
         className="absolute top-0 left-0 h-[100%] w-[100%]"
       />
@@ -136,10 +131,10 @@ export default function Spotlight() {
         <div ref={leftColRef} className="col-span-6 border-r-[1px] border-r-[var(--secondary-color)]">
           <div className="lg:py-[60px] lg:!px-[90px] px-[20px]">
             <Heading className="heading" Heading={"TARC in the Spotlight"} />
-            <div className="lg:py-[38px] pt-[30px] relative overflow-hidden lg:pl-[15px]">
+            <div className="lg:py-[38px] lg:pt-[30px] pt-[30px] relative overflow-hidden lg:pl-[15px]">
               <img
                 src="./assets/images/xsmall_bg_texture.png"
-                className="absolute top-[55%] translate-y-[-50%] w-[210px] left-[0]"
+                className="absolute top-[47%] translate-y-[-50%] w-[210px] left-[0]"
                 alt="testimonial"
               />
               <Swiper
@@ -194,7 +189,7 @@ export default function Spotlight() {
                 ].map((slide, index) => (
                   <SwiperSlide key={slide.id}>
                     <div className="slider_item">
-                      <span className="text-[#8B5949] block mb-[25px] text-[18px]">
+                      <span className="text-[#8B5949] block mb-[50px] text-[18px]">
                         ({(index + 1).toString().padStart(2, "0")})
                       </span>
                       <img
@@ -206,7 +201,7 @@ export default function Spotlight() {
                   </SwiperSlide>
                 ))}
               </Swiper>
-              <div className="arrow_container flex place-items-center relative lg:justify-end justify-center mt-[20px] lg:mt-[35px] gap-[10px]">
+              <div className="arrow_container flex place-items-center relative lg:justify-end justify-center mt-[20px] lg:mt-[90px] gap-[10px]">
                 <div className="prev-arrow bg-[var(--primary-color)] h-[35px] w-[35px] rounded-[50%] cursor-pointer">
                   <img
                     src="./assets/icons/right_arrow.svg"

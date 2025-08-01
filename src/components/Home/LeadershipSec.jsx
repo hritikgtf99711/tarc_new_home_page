@@ -129,7 +129,7 @@ export default function LeadershipSec() {
   return (
     <section className='py_section leadership-sec' ref={sectionRef}>
       <img
-        src='./assets/images/leadership_bg.jpg' // Placeholder background image
+        src='./assets/images/leadership_bg.jpg' 
         alt='Background'
         className='background-img absolute top-0 left-0 w-[100%] h-[100%] object-cover opacity-50'
       />
@@ -147,6 +147,7 @@ export default function LeadershipSec() {
         <div className='grid grid-cols-6 lg:grid-cols-12 lg:pt-[60px]'>
           <div className='lg:col-span-3 col-span-6'>
             <div className='main-heading'>
+               <div className='lg:w-[calc(65%-12px)]'>
               <Heading
                 className={'!leading-[36px] mb-[30px]'}
                 Heading={
@@ -155,6 +156,7 @@ export default function LeadershipSec() {
                   </span>
                 }
               />
+              </div>
             </div>
             <div className='lg:w-[65%] ml-[auto] content-container'>
               <Paragraph

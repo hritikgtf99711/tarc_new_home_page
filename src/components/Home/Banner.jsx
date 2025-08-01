@@ -66,7 +66,7 @@ export default function Banner() {
         </div>
       </div>
       <div className='mt-[30px] relative relative_div_height'>
-        <img src='./assets/images/image_bg_texture.png' className='w-[70vw] absolute top-[38px] left-[50%] translate-x-[-50%] z-[1] m-[auto]' alt='' />
+        <img src='./assets/images/image_bg_texture.png' className='w-[70vw] absolute top-[42px] left-[50%] translate-x-[-50%] z-[1] m-[auto]' alt='' />
         <BannerSlider className='banner-slider' />
       </div>
     </section>

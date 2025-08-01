@@ -151,10 +151,7 @@ export default function Projectsec() {
       });
     }, sectionRef);
 
-    // Cleanup
-    return () => {
-      const projectItems = sectionRef.current.querySelectorAll('.project_item');
-    
+    return () => {    
       ctx.revert();
     };
   }, []);
@@ -167,7 +164,7 @@ export default function Projectsec() {
         alt='Background texture'
       />
       <div className='grid grid-cols-6 lg:grid-cols-12'>
-        <div className='col-span-6'>
+        <div className='col-span-6  overflow-hidden relative'>
           <div className='content_container h-[100%] relative'>
             <img
               src='./assets/images/home/project_images/project_right_img.jpg'
