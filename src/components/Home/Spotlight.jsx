@@ -260,7 +260,7 @@ export default function Spotlight() {
               />
               <a
                 href=""
-                className="text-primary capitalize flex place-items-center mt-[15px]"
+                className="text-primary capitalize relative z-[99] flex place-items-center mt-[15px]"
               >
                 <span className="me-[8px]">read more</span>
                 <img src="./assets/icons/arrow-right.png" width={"20"} alt="" />
