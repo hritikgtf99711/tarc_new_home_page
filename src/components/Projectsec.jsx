@@ -190,7 +190,7 @@ export default function Projectsec() {
               <img
                 src='./assets/images/home/project_images/kailasa/kailasa_logo.png'
                 alt='TARC Kailasa logo'
-                width='160'
+                width='90'
                 className='ml-[auto] mb-[30px]'
               />
               <img
@@ -207,7 +207,7 @@ export default function Projectsec() {
               <img
                 src='./assets/images/home/project_images/kailasa/kailasa_logo.png'
                 alt='TARC Kailasa logo'
-                width='160'
+                width='90'
                 className='ml-[auto] mb-[30px]'
               />
               <img
@@ -224,7 +224,7 @@ export default function Projectsec() {
               <img
                 src='./assets/images/home/project_images/kailasa/kailasa_logo.png'
                 alt='TARC Kailasa logo'
-                width='160'
+                width='90'
                 className='ml-[auto] mb-[30px]'
               />
               <img
@@ -241,7 +241,7 @@ export default function Projectsec() {
               <img
                 src='./assets/images/home/project_images/kailasa/kailasa_logo.png'
                 alt='TARC Kailasa logo'
-                width='160'
+                width='90'
                 className='ml-[auto] mb-[30px]'
               />
               <img
@@ -258,7 +258,7 @@ export default function Projectsec() {
               <img
                 src='./assets/images/home/project_images/kailasa/kailasa_logo.png'
                 alt='TARC Kailasa logo'
-                width='160'
+                width='90'
                 className='ml-[auto] mb-[30px]'
               />
               <img
