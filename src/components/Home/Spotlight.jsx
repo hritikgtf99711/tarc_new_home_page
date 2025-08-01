@@ -201,7 +201,7 @@ export default function Spotlight() {
                   </SwiperSlide>
                 ))}
               </Swiper>
-              <div className="arrow_container flex place-items-center relative lg:justify-end justify-center mt-[20px] lg:mt-[90px] gap-[10px]">
+              <div className="arrow_container  relative z-[9999] flex place-items-center relative lg:justify-end justify-center mt-[20px] lg:mt-[90px] gap-[10px]">
                 <div className="prev-arrow bg-[var(--primary-color)] h-[35px] w-[35px] rounded-[50%] cursor-pointer">
                   <img
                     src="./assets/icons/right_arrow.svg"

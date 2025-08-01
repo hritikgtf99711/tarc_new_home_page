@@ -159,8 +159,8 @@ export default function Projectsec() {
   return (
     <section className='relative pt-[30px] overflow-hidden project-sec' ref={sectionRef}>
       <img
-        src='./assets/images/image_bg_texture.png'
-        className='w-[80%] absolute top-[-72px] left-[50%] translate-x-[-50%] z-[-1] m-[auto] bg-texture'
+        src='./assets/images/pattern.svg'
+        className='w-[80%] absolute top-[-60px] left-[50%] translate-x-[-50%] z-[-1] m-[auto] bg-texture'
         alt='Background texture'
       />
       <div className='grid grid-cols-6 lg:grid-cols-12'>
@@ -253,7 +253,7 @@ export default function Projectsec() {
                 <span className='w-[100px] h-[1px] bg-[#fff] block ms-[15px]'></span>
               </figcaption>
             </figure>
-            <figure className='project_item snap-center text-right pb-[180px]'>
+            <figure className='project_item snap-center text-right pb-[130px]'>
               <img
                 src='./assets/images/home/project_images/kailasa/kailasa_logo.png'
                 alt='TARC Kailasa logo'

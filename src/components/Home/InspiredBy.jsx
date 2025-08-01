@@ -55,7 +55,7 @@ export default function InspiredBy() {
   }, []);
 
   return (
-    <section className='py-[60px] border-y-[#AA8A80] bg-[var(--opacity-color)] border-t-[0.2px] border-b-[0.2px] inspired-sec'>
+    <section className='py-[60px] border-y-[#aa8a809e] bg-[var(--opacity-color)] border-t-[0.1px] border-b-[0.1px] inspired-sec'>
       <div className='container py-[30px]'>
         <div className='lg:flex place-items-center justify-center'>
           <h2 className='font-[Baskervville] text-primary !font-[300]  text-[30px]'>Inspired By India</h2>

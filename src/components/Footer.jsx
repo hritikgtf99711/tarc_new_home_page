@@ -74,7 +74,7 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="relative" ref={footerRef}>
+    <footer className="relative z-[2]" ref={footerRef}>
       <div className="">
         <img
           src="./assets/images/footer_bg.jpg"

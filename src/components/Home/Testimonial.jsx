@@ -175,7 +175,7 @@ export default function Testimonial() {
   return (
     <section
       ref={sectionRef}
-      className='py_section relative overflow-hidden border-t-[var(--secondary-color)] border-t-[1px] testimonial-sec'
+      className='py_section relative z-[999] overflow-hidden border-t-[var(--secondary-color)] border-t-[1px] testimonial-sec'
     >
       <div className='container'>
         <div ref={headingRef} className='text-center'>
@@ -207,7 +207,7 @@ export default function Testimonial() {
                         {testimonial.name}
                       </h3>
                       <span className='text-[#AA8A80] text-[14px] project'>{testimonial.project}</span>
-                      <div className='arrow_container flex justify-end mt-[35px] gap-[10px]'>
+                      <div className='arrow_container   relative z-[999999]  flex justify-end mt-[35px] gap-[10px]'>
                         <div className='prev_arrow bg-[var(--primary-color)] h-[35px] w-[35px] rounded-[50%] cursor-pointer'>
                           <img
                             src='./assets/icons/right_arrow.svg'
@@ -252,7 +252,7 @@ export default function Testimonial() {
                 </SwiperSlide>
               ))}
             </Swiper>
-            <div className='arrow_container lg:hidden flex justify-center lg:justify-end mt-[35px] gap-[10px]'>
+            <div className='arrow_container relative z-[2] lg:hidden flex justify-center lg:justify-end mt-[35px] gap-[10px]'>
               <div className='prev_arrow bg-[var(--primary-color)] h-[35px] w-[35px] rounded-[50%] cursor-pointer'>
                 <img
                   src='./assets/icons/right_arrow.svg'
