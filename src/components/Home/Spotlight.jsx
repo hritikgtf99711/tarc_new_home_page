@@ -1,20 +1,26 @@
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Heading from "../Heading";
 import Paragraph from "../Paragraph";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/pagination";
-import { useRef, useState, useEffect } from "react";
-
 import { Pagination, Navigation } from "swiper/modules";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Spotlight() {
-  const [slideRange, setSlideRange] = useState("1-3"); 
+  const [slideRange, setSlideRange] = useState("1-3");
   const swiperRef = useRef(null);
+  const sectionRef = useRef(null);
+  const leftColRef = useRef(null);
+  const rightColRef = useRef(null);
 
   const updateSlideRange = (swiper) => {
-    const slidesPerView = 3; // Matches slidesPerView in Swiper config
+    const slidesPerView = 3;
     const totalSlides = swiper.slides.length;
-    const activeIndex = swiper.realIndex; // Use realIndex for looped slides
-    const firstVisibleSlide = activeIndex + 1; // 1-based index for display
+    const activeIndex = swiper.realIndex;
+    const firstVisibleSlide = activeIndex + 1;
     const lastVisibleSlide = Math.min(activeIndex + slidesPerView, totalSlides);
     setSlideRange(`${firstVisibleSlide}-${lastVisibleSlide}`);
   };
@@ -26,19 +32,116 @@ export default function Spotlight() {
       );
     }
   }, []);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Left column: Heading animation
+      gsap.from(leftColRef.current.querySelector(".heading"), {
+        opacity: 0,
+        y: 60,
+        duration: 1.2,
+        ease: "power4.out",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 70%",
+          toggleActions: "play none none reverse",
+        },
+      });
+
+      // Left column: Swiper slides animation (staggered)
+      gsap.from(".slider_item", {
+        opacity: 0,
+        y: 40,
+        scale: 0.95,
+        stagger: 0.15,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 65%",
+          toggleActions: "play none none reverse",
+        },
+      });
+
+      // Left column: Navigation arrows and progress bar
+      gsap.from(".arrow_container .prev-arrow, .arrow_container .next-arrow", {
+        opacity: 0,
+        scale: 0.7,
+        rotation: 15,
+        stagger: 0.1,
+        duration: 0.8,
+        ease: "back.out(1.7)",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 60%",
+          toggleActions: "play none none reverse",
+        },
+      });
+
+      gsap.from(".arrow_container .progress-container", {
+        opacity: 0,
+        width: 0,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 60%",
+          toggleActions: "play none none reverse",
+        },
+      });
+
+      // Right column: Quote icon
+      gsap.from(rightColRef.current.querySelector("img"), {
+        opacity: 0,
+        scale: 0.3,
+        rotation: -45,
+        duration: 1.2,
+        ease: "elastic.out(1, 0.5)",
+        scrollTrigger: {
+          trigger: rightColRef.current,
+          start: "top 70%",
+          toggleActions: "play none none reverse",
+        },
+      });
+
+      // Right column: Content (publication, date, heading, paragraph, link)
+      gsap.from(rightColRef.current.querySelectorAll("ul, .heading, .paragraph, a"), {
+        opacity: 0,
+        x: 60,
+        stagger: 0.2,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: rightColRef.current,
+          start: "top 65%",
+          toggleActions: "play none none reverse",
+        },
+      });
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section className="border-[1px] lg:py-0 py-[80px] relative border-[var(--secondary-color)] ">
-        <img src="./assets/images/home/newsletter/newsletter_bg.jpg" alt="bg" className="absolute top-0 left-0 h-[100%] w-[100%]"/>
-      <div className="grid grid-cols-1 lg:grid-cols-12  lg:h-[100vh]   relative">
-        <div className="col-span-6 border-r-[1px] border-r-[var(--secondary-color)]">
+    <section
+      ref={sectionRef}
+      className="border-[1px] lg:py-0 py-[80px] relative border-y-0 border-[var(--secondary-color)]"
+    >
+      <img
+        src="./assets/images/home/newsletter/newsletter_bg.jpg"
+        alt="bg"
+        className="absolute top-0 left-0 h-[100%] w-[100%]"
+      />
+      <div className="grid grid-cols-1 lg:grid-cols-12 lg:h-[100vh] relative">
+        <div ref={leftColRef} className="col-span-6 border-r-[1px] border-r-[var(--secondary-color)]">
           <div className="lg:py-[60px] lg:!px-[90px] px-[20px]">
-            <Heading Heading={" TARC in the Spotlight"} />
-           
+            <Heading className="heading" Heading={"TARC in the Spotlight"} />
             <div className="lg:py-[38px] pt-[30px] relative overflow-hidden lg:pl-[15px]">
-               <img src="./assets/images/xsmall_bg_texture.png"
-                          className="absolute top-[55%] translate-y-[-50%] w-[210px] left-[0]"
-                          alt="testimonial"
-                        />
+              <img
+                src="./assets/images/xsmall_bg_texture.png"
+                className="absolute top-[55%] translate-y-[-50%] w-[210px] left-[0]"
+                alt="testimonial"
+              />
               <Swiper
                 modules={[Pagination, Navigation]}
                 pagination={{
@@ -51,97 +154,49 @@ export default function Spotlight() {
                   prevEl: ".prev-arrow",
                   nextEl: ".next-arrow",
                 }}
-                loop={true} 
+                loop={true}
                 onSwiper={(swiper) => {
-                  swiperRef.current = swiper; 
-                  updateSlideRange(swiper); 
+                  swiperRef.current = swiper;
+                  updateSlideRange(swiper);
                 }}
-                  breakpoints={{
-                320: {
-                  slidesPerView: 1,
-                  spaceBetween: 10,
-                },
-                640: {
-                  slidesPerView: 2,
-                  spaceBetween: 20,
-                },
-                1024: {
-                  slidesPerView: 2,
-                  spaceBetween: 30,
-                },
-                1367: {
-                  slidesPerView: 3,
-                  spaceBetween: 30,
-                },
-              }}
+                breakpoints={{
+                  320: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                  },
+                  640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                  },
+                  1024: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                  },
+                  1367: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                  },
+                }}
               >
                 {[
-                  {
-                    id: 1,
-                    src: "./assets/images/home/newsletter/news_letter_img_1.jpg",
-                    
-                  },
-                  {
-                    id: 2,
-                    src: "./assets/images/home/newsletter/news_letter_img_2.jpg",
-                   
-                  },
-                  {
-                    id: 3,
-                    src: "./assets/images/home/newsletter/news_letter_img_3.jpg",
-                    
-                  },
-                  {
-                    id: 4,
-                    src: "./assets/images/home/newsletter/news_letter_img_4.jpg",
-                    
-                  },
-                  {
-                    id: 5,
-                    src: "./assets/images/home/newsletter/news_letter_img_1.jpg",
-                    
-                  },
-                  {
-                    id: 6,
-                    src: "./assets/images/home/newsletter/news_letter_img_2.jpg",
-                   
-                  },
-                  {
-                    id: 7,
-                    src: "./assets/images/home/newsletter/news_letter_img_3.jpg",
-                    
-                  },
-                  {
-                    id: 8,
-                    src: "./assets/images/home/newsletter/news_letter_img_4.jpg",
-                    
-                  },
-                  {
-                    id: 9,
-                    src: "./assets/images/home/newsletter/news_letter_img_1.jpg",
-                    
-                  },
-                  {
-                    id: 10,
-                    src: "./assets/images/home/newsletter/news_letter_img_2.jpg",
-                   
-                  },
-                  {
-                    id: 11,
-                    src: "./assets/images/home/newsletter/news_letter_img_3.jpg",
-                    
-                  },
-                  {
-                    id: 12,
-                    src: "./assets/images/home/newsletter/news_letter_img_4.jpg",
-                    
-                  },
-                ].map((slide,index) => (
+                  { id: 1, src: "./assets/images/home/newsletter/news_letter_img_1.jpg" },
+                  { id: 2, src: "./assets/images/home/newsletter/news_letter_img_2.jpg" },
+                  { id: 3, src: "./assets/images/home/newsletter/news_letter_img_3.jpg" },
+                  { id: 4, src: "./assets/images/home/newsletter/news_letter_img_4.jpg" },
+                  { id: 5, src: "./assets/images/home/newsletter/news_letter_img_1.jpg" },
+                  { id: 6, src: "./assets/images/home/newsletter/news_letter_img_2.jpg" },
+                  { id: 7, src: "./assets/images/home/newsletter/news_letter_img_3.jpg" },
+                  { id: 8, src: "./assets/images/home/newsletter/news_letter_img_4.jpg" },
+                  { id: 9, src: "./assets/images/home/newsletter/news_letter_img_1.jpg" },
+                  { id: 10, src: "./assets/images/home/newsletter/news_letter_img_2.jpg" },
+                  { id: 11, src: "./assets/images/home/newsletter/news_letter_img_3.jpg" },
+                  { id: 12, src: "./assets/images/home/newsletter/news_letter_img_4.jpg" },
+                ].map((slide, index) => (
                   <SwiperSlide key={slide.id}>
                     <div className="slider_item">
-                        
                       <span className="text-[#8B5949] block mb-[25px] text-[18px]">
-({(index + 1).toString().padStart(2, '0')})                      </span>
+                        ({(index + 1).toString().padStart(2, "0")})
+                      </span>
                       <img
                         className="border-[1px] w-[100%] p-[5px] border-[#AA8A80]"
                         src={slide.src}
@@ -178,43 +233,40 @@ export default function Spotlight() {
             </div>
           </div>
         </div>
-        <div className="col-span-6  lg:mt-[auto] mt-[40px]">
-          <img
-            src="./assets/icons/quote.svg"
-            alt="quote"
-            className="absolute top-[10px]  right-[280px]"
-          />
-          <div className="lg:py-[60px]  lg:!px-[90px] px-[20px]">
+        <div ref={rightColRef} className="col-span-6 lg:mt-[auto] mt-[40px]">
+          <div className="lg:py-[60px] relative lg:!mx-[30px] px-[20px]">
+            <img
+              src="./assets/icons/quote.svg"
+              alt="quote"
+              className="absolute top-[-50px] left-[18px]"
+            />
             <ul className="lg:mb-[40px] mb-[20px]">
               <li className="mb-[8px]">
-                <span className="text-primary font-[500] me-4">
-                  Publication:
-                </span>
-                <span> The Economic Times</span>
+                <span className="text-primary font-[500] me-4">Publication:</span>
+                <span>The Economic Times</span>
               </li>
               <li className="">
                 <span className="text-primary font-[500] me-4">Date:</span>
-                <span> 25 feb 2025</span>
+                <span>25 Feb 2025</span>
               </li>
             </ul>
             <div className="mt-[20px]">
               <Heading
-                className={`font-libre-baskerville !text-[18px] lg:!text-[24px]`}
-                Heading={
-                  " TARC reports highest ever annual sales of Rs 3,722 crore in FY25"
-                }
+                className="font-libre-baskerville !text-[18px] lg:!text-[22px]"
+                Heading={"TARC reports highest ever annual sales of Rs 3,722 crore in FY25"}
               />
               <div className="w-[100%] h-[1px] my-[20px] lg:my-[30px] bg-[var(--secondary-color)]"></div>
               <Paragraph
+                className="paragraph"
                 text={
                   "New Delhi: Realty developer TARC Ltd is expecting Rs 2,000 crore revenue from the next phase of its two projects - Ishva and Kailasa, Amar Sari.."
                 }
               />
-              <a    
+              <a
                 href=""
                 className="text-primary capitalize flex place-items-center mt-[15px]"
               >
-                <span className="me-[8px]">read more </span>
+                <span className="me-[8px]">read more</span>
                 <img src="./assets/icons/arrow-right.png" width={"20"} alt="" />
               </a>
             </div>
