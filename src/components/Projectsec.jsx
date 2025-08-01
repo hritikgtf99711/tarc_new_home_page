@@ -166,6 +166,7 @@ export default function Projectsec() {
 ></div>
       <div className='grid grid-cols-6 lg:grid-cols-12'>
         <div className='col-span-6  overflow-hidden relative'>
+          <div className='absolute_overlay bg-[linear-gradient(45deg, #2223288a, transparent)] absolute bottom-0 left-0 h-[100%] w-[100%]'></div>
           <div className='content_container h-[100%] relative'>
             <img
               src='./assets/images/home/project_images/project_right_img.jpg'
