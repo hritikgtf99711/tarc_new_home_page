@@ -209,7 +209,7 @@ export default function Footer() {
                   <div className="col-span-3 lg:me-auto">
                     <Heading
                       className="lg:mb-[20px] lg:text-[auto] !text-[20px] mb-[4px] heading"
-                      Heading={"INVERTER"}
+                      Heading={"INVESTER"}
                     />
                     <ul className="lg:mb-0 mb-[25px]">
                       <li className="font-[300] lg:mb-[12px]">

@@ -36,7 +36,7 @@ export default function Banner() {
       scale: 1.2,
       duration: 1.5,
       ease: 'power3.out',
-      delay: 1.5,
+      delay: 1.2,
     });
 
     gsap.from('.banner_sec .banner-slider', {
@@ -53,10 +53,10 @@ export default function Banner() {
   }, []);
 
   return (
-    <section className='banner_sec mt-[17px] overflow-hidden'>
+    <section className='banner_sec overflow-hidden'>
       <div className='container'>
         <div className='heading_container text-center'>
-          <img src='./assets/images/logo.png' className='m-auto' alt='logo' width='135px' />
+          <img src='./assets/images/logo.png' className='m-auto' alt='logo' width='210' />
           <h1 className='font-baskerville uppercase text-primary text-[26px] mt-[22px] mb-[16px] font-[400]'>Where legacy finds a new home</h1>
           <div className='icon_div inline-flex place-items-center'>
             <div className='line_container h-[0.8px] w-[70px] bg-[var(--primary-color)]'></div>

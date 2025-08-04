@@ -191,12 +191,12 @@ export default function Projectsec() {
               <img
                 src='./assets/images/home/project_images/kailasa/kailasa_logo.png'
                 alt='TARC Kailasa logo'
-                width='90'
+                width='100'
                 className='ml-[auto] mb-[30px]'
               />
               <img
-                src='./assets/images/home/project_images/kailasa/kailasa_banner.jpg'
-                className='xl:h-[60vh] h-[400px]'
+                src='./assets/images/home/project_images/kailasa/banner.jpg'
+                className='w-[100%] h-[400px]'
                 alt='TARC Kailasa banner'
               />
               <figcaption className='mt-4 flex place-items-center'>
@@ -206,73 +206,56 @@ export default function Projectsec() {
             </figure>
             <figure className='project_item snap-center text-right mb-[180px]'>
               <img
-                src='./assets/images/home/project_images/kailasa/kailasa_logo.png'
+                src='./assets/images/home/project_images/ishva/logo.png'
                 alt='TARC Kailasa logo'
-                width='90'
+                width='150'
                 className='ml-[auto] mb-[30px]'
               />
               <img
-                src='./assets/images/home/project_images/kailasa/kailasa_banner.jpg'
-                className='xl:h-[60vh] h-[400px]'
+                src='./assets/images/home/project_images/ishva/banner.jpg'
+                className='w-[100%] h-[400px]'
                 alt='TARC Kailasa banner'
               />
               <figcaption className='mt-4 flex place-items-center'>
-                <span className='uppercase text-white text-[16px] text-left'>TARC Kailasa, Patel Road</span>
+                <span className='uppercase text-white text-[16px] text-left'>TARC ishva, 63a, gurugram</span>
                 <span className='w-[100px] h-[1px] bg-[#fff] block ms-[15px]'></span>
               </figcaption>
             </figure>
             <figure className='project_item snap-center text-right mb-[180px]'>
               <img
-                src='./assets/images/home/project_images/kailasa/kailasa_logo.png'
+                src='./assets/images/home/project_images/tripundra/logo.png'
                 alt='TARC Kailasa logo'
-                width='90'
+                width='150'
                 className='ml-[auto] mb-[30px]'
               />
               <img
-                src='./assets/images/home/project_images/kailasa/kailasa_banner.jpg'
-                className='xl:h-[60vh] h-[400px]'
+                src='./assets/images/home/project_images/tripundra/banner.jpg'
+                className='w-[100%] h-[400px]'
                 alt='TARC Kailasa banner'
               />
               <figcaption className='mt-4 flex place-items-center'>
-                <span className='uppercase text-white text-[16px] text-left'>TARC Kailasa, Patel Road</span>
+                <span className='uppercase text-white text-[16px] text-left'>TARC tripundra, New Delhi</span>
                 <span className='w-[100px] h-[1px] bg-[#fff] block ms-[15px]'></span>
               </figcaption>
             </figure>
-            <figure className='project_item snap-center text-right mb-[180px]'>
+            <figure className='project_item snap-center text-right mb-[180px] pb-[100px]'>
               <img
-                src='./assets/images/home/project_images/kailasa/kailasa_logo.png'
+                src='./assets/images/home/project_images/maceo/logo.png'
                 alt='TARC Kailasa logo'
-                width='90'
+                width='150'
                 className='ml-[auto] mb-[30px]'
               />
               <img
-                src='./assets/images/home/project_images/kailasa/kailasa_banner.jpg'
-                className='xl:h-[60vh] h-[400px]'
+                src='./assets/images/home/project_images/maceo/banner.jpg'
+                className='w-[100%] h-[400px]'
                 alt='TARC Kailasa banner'
               />
               <figcaption className='mt-4 flex place-items-center'>
-                <span className='uppercase text-white text-[16px] text-left'>TARC Kailasa, Patel Road</span>
+                <span className='uppercase text-white text-[16px] text-left'>TARC Maceo, Sec-91, Gurgaon</span>
                 <span className='w-[100px] h-[1px] bg-[#fff] block ms-[15px]'></span>
               </figcaption>
             </figure>
-            <figure className='project_item snap-center text-right pb-[130px]'>
-              <img
-                src='./assets/images/home/project_images/kailasa/kailasa_logo.png'
-                alt='TARC Kailasa logo'
-                width='90'
-                className='ml-[auto] mb-[30px]'
-              />
-              <img
-                src='./assets/images/home/project_images/kailasa/kailasa_banner.jpg'
-                className='xl:h-[60vh] h-[400px]'
-                alt='TARC Kailasa banner'
-              />
-              <figcaption className='mt-4 flex place-items-center'>
-                <span className='uppercase text-white text-[16px] text-left'>TARC Kailasa, Patel Road</span>
-                <span className='w-[100px] h-[1px] bg-[#fff] block ms-[15px]'></span>
-              </figcaption>
-            </figure>
-          
+           
           </div>
         </div>
       </div>

@@ -2,6 +2,7 @@
 @import "tailwindcss";
 :root{--primary-color:#0B4879;--secondary-color:#AA8A80;--opacity-color:#a9887e0f}
 body{background: #EFE9E4;font-family: "Work Sans", sans-serif;}
+h1,h2,p{position: relative;z-index: 333;}
 a:hover{text-decoration: underline;}
 .container {  width: 100%;  margin-left: auto;  margin-right: auto;  padding-left: 15px;  padding-right: 15px;  box-sizing: border-box;}
 .font-baskerville{font-family: "Baskervville SC", serif;}

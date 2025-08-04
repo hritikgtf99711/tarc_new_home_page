@@ -13,7 +13,7 @@ export default function LuxurySec() {
       opacity: 0,
       y: 30,
       duration: 0.8,
-      stagger: 0.2,
+      stagger: 0.2, 
       ease: 'power2.out',
       scrollTrigger: {
         trigger: '.luxury-sec',
